@@ -1,0 +1,269 @@
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: JetBrainsMono;
+    src: url(./JetBrainsMono-Medium.ttf);
+}
+
+.app {
+    width: 100%;
+    font-family: JetBrainsMono;
+}
+
+.header {
+    width: 100%;
+    background-color: rgb(138, 43, 226);
+}
+
+.header-wrapper {
+    max-width: 1100px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.header-title {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: .5rem;
+    color: #fff;
+}
+
+.input-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-wrapper input {
+    padding: .6rem .7rem;
+    width: 30%;
+    margin-right: .3rem;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    border: 0;
+    border-radius: 4px;
+}
+
+.input-wrapper button {
+    padding: .6rem .9rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    background-color: rgb(33, 42, 37);
+    color: #fff;
+}
+
+
+/* main styling */
+.main {
+    width: 100%;
+}
+
+.main-wrapper {
+    max-width: 1100px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.status-wrapper {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    display: none;
+}
+
+.display {
+    display: flex;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: bisque;
+    padding: .3rem 1rem;
+}
+
+.status-title {
+    color: #000;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-right: .3rem;
+}
+
+.status-number {
+    color: #000;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.todo-container {
+    width: 100%;
+}
+
+.todo-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.6rem;
+    list-style: none;
+    gap: .6rem;
+}
+
+.todo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    margin-bottom: .5rem;
+    background-color: rgb(218, 218, 218);
+}
+
+.todo-innerwrapper { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+}
+
+.task-input-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.todo-innerwrapper button {
+    border: 0;
+    background-color: none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    font-size: 1.2rem;
+    border-radius: 100%;
+}
+
+.task-input-wrapper input[type = "checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-right: 8px;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.task-input-wrapper input[type = "checkbox"]:checked {
+    background-color: rgb(138, 43, 226);
+}
+
+.task-input-wrapper input[type = "checkbox"]::before {
+    scale: 0;
+}
+
+.task-input-wrapper input[type = "checkbox"]:checked::before {
+    content: '✔';
+    position: absolute;
+    color: #fff;
+    scale: 1;
+transition: all .9s ease-in ;
+}
+
+.task-text {
+    font-size: 1rem;
+    line-height: 1.1;
+    /* max-width: 500px; */
+    color: #000;
+    outline: 0;
+}
+
+.complete {
+    background-color: rgba(16, 147, 16, 0.878);
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.complete .task-text {
+    color: #fff;
+}
+
+
+
+/* footer */
+.footer {
+    width: 100%;
+}
+
+.footer-wrapper {
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.copy {
+    font-size: .8rem;
+    line-height: 1.1;
+    color: #000;
+}
+
+.my-name {
+    font-size: .8rem;
+    line-height: 1.1;
+    color: #000;
+}
+
+
+/* media queries */
+@media  screen and (max-width: 1100px) {
+    .header-wrapper, .footer-wrapper {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .input-wrapper {
+        flex-direction: column;
+    }
+
+    .input-wrapper input {
+        width: 60%;
+        margin-bottom: .5rem;
+    }
+
+    .input-wrapper button {
+        width: 60%;
+    }
+
+    .status-wrapper {
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+    }
+}

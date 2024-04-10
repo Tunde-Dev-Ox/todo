@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header-wrapper">
+                <h1 class="header-title">
+                    Today
+                </h1>
+                <form class="input-wrapper">
+                    <input type="text" name="" id="todo-input" class="todo-input">
+                    <button type="submit">
+                        Add Task
+                    </button>
+                </form>
+            </div>
+        </div>
+        <main class="main">
+            <div class="main-wrapper">
+                <div class="status-wrapper">
+                    <div class="status">
+                        <div class="status-title">Remaining</div>
+                        <div class="status-number" id="remaining">0</div>
+                    </div>
+                    <div class="status">
+                        <div class="status-title">Completed</div>
+                        <div class="status-number" id="completed">0</div>
+                    </div>
+                    <div class="status">
+                        <div class="status-title">Total</div>
+                        <div class="status-number" id="total"></div>
+                    </div>
+                </div>
+                <div class="todo-container">
+                    <ul class="todo-wrapper">
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-wrapper">
+                <div class="copy">
+                    &copy;2024
+                </div>
+                <div class="my-name">
+                    Code and design by <a href="#" target="_blank" rel="noopener noreferrer">Joseph Olatunde</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
